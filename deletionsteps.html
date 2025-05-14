@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Bringing a new era of Smart Living">
+    <meta name="keywords" content="roomsvital, smart lock, smart homes, smart appliances, 3d printing, smart business, iot, internet of things, smartest lock, smart switch, retrofit, retrofitted, ayush singh, ">
+    <meta name="author" content="Roomsvital Automation Solutions Private Limited">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>RoomsVital - Bringing a New Era of Smart Living</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/39eed0eae6.js" crossorigin="anonymous"></script>
+</head>
+<body class="overflow-x-hidden container bg-neutral-900" x-data="{navBarOpen: false, scrolledFromTop: false, mediashown: false, social: false, product: false}"
+x-init="window.pageYOffset > 60? scrolledFromTop = true : scrolledFromTop = false"
+@scroll.window="window.pageYOffset > 60? scrolledFromTop = true : scrolledFromTop = false" > 
+
+<!-- preloader animation -->
+<div class="loader-bg h-screen w-screen bg-neutral-900 z-[1000] fixed flex justify-center items-center">
+
+    <i class="fa-solid fa-circle-notch text-[#eb7047] text-2xl animate-spin"></i>
+</div>
+
+<!-- Navbar section -->
+      <header class="z-30 fixed flex justify-between items-center px-4 md:px-12 h-16 md:h-22 w-full bg-neutral-900
+      transition-all duration-1000"
+      :class="{'md:h-24 bg-neutral-900': !scrolledFromTop, 'md:h-14 bg-black': scrolledFromTop}">
+        <a href="https://roomsvital.com">
+            <img src="images/RoomsVital horizontal logo.png" alt="" class=" h-14 md:h-16 transition-all duration-500"
+            :class="{'md:h-16': !scrolledFromTop, 'md:h-14': scrolledFromTop}">
+        </a>
+       <nav>
+         <button class="mt-4 md:hidden transition-all duration-300" @click="navBarOpen = !navBarOpen" :class="{'md:hidden': !navBarOpen, 'hidden': navBarOpen}">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+         </button>
+         <button class="mt-4 hidden  transition-all duration-300" @click="navBarOpen = !navBarOpen" :class="{'hidden': !navBarOpen, 'md:hidden': navBarOpen}">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-[#eb7047]"
+            :class="{'text-[#eb7047]': !scrolledFromTop, 'text-white': scrolledFromTop}">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              
+         </button>
+        <ul class="text-white fixed left-0 right-0 bg-black mx-auto text-center space-y-4 py-4
+        transition
+        duration-1000
+        font-medium
+        mt-2
+        md:flex
+        md:relative
+        md:min-h-0
+        md:space-y-0
+        md:space-x-8
+        md:translate-x-0
+        md:bg-inherit
+        md:my-auto"
+        :class="{'translate-x-full': !navBarOpen, 'translate-x-0': navBarOpen}">
+            <li class="hover:text-[#eb7047]" :class="{'md:hover:text-[#eb7047]': !scrolledFromTop, 'md:hover:text-[#eb7047]': scrolledFromTop}"><a href="../#hero">Home</a></li>
+            <li class="hover:text-[#eb7047]" :class="{'md:hover:text-[#eb7047]': !scrolledFromTop, 'md:hover:text-[#eb7047]': scrolledFromTop}"><a href="../#product">Product</a></li>
+            <li class="hover:text-[#eb7047]" :class="{'md:hover:text-[#eb7047]': !scrolledFromTop, 'md:hover:text-[#eb7047]': scrolledFromTop}"><a href="../#aboutus">About Us!</a></li>
+            <li class="hover:text-[#eb7047]" :class="{'md:hover:text-[#eb7047]': !scrolledFromTop, 'md:hover:text-[#eb7047]': scrolledFromTop}"><a href="../#media">Media</a></li>
+            <li class="hover:text-[#eb7047]" :class="{'md:hover:text-[#eb7047]': !scrolledFromTop, 'md:hover:text-[#eb7047]': scrolledFromTop}"><a href="../#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </header> 
+
+
+<!-- Account Deletion Instructions Page -->
+
+<section id="account_deletion">
+    <div class="bg-neutral-800 w-screen lg:w-screen px-10 lg:px-32 pt-5 pb-8 sm:py-6 flex flex-col items-center pt-12">
+        <div class="h-72"></div>
+        <br><br><br><br><br>
+
+        <div class="text-center text-white text-3xl pt-32 mt-40 font-bold mb-8 w-screen lg:w-screen">
+            Account Deletion Instructions
+        </div>
+
+        <div class="text-white my-4 py-4 pt-24 text-lg">
+            <span class="text-2xl font-bold text-white">*Request to Delete Your Account and Associated Data*</span><br><br>
+
+            We value your privacy and are committed to providing transparency and control over your data. If you wish to delete your account and all associated data for our app, you can submit a request using the button below.<br><br>
+
+            <span class="font-bold">Please note:</span><br><br>
+            <ul class="list-disc list-inside text-white">
+                <li>This request will permanently delete your account and all related data stored by us.</li>
+                <li>The data that will be deleted includes your profile, preferences, usage history, and any content you've uploaded.</li>
+                <li>We do not retain any personally identifiable information after the account is deleted.</li>
+                <li>Some non-personal or anonymized data may be retained for analytics or legal purposes, as outlined in our Privacy Policy.</li>
+            </ul><br>
+
+            To request account deletion, please complete the form linked below. We'll process your request within 7 business days.<br><br>
+
+            <!--  button for external form -->
+            <a href="https://forms.gle/ou4rxi4vsLVCX9hx5" target="_blank"
+   class="inline-block bg-[#eb7047] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#d9613c] transition-colors duration-300">
+  Request Account Deletion
+</a>
+
+        </div>
+
+        <div class="text-white my-4 py-4 pt-24">
+            <span class="font-bold">Step 1: Open the RoomsVital App</span><br>
+            Launch the RoomsVital mobile application on your device and make sure you're logged in with the account you wish to delete.<br><br>
+
+            <span class="font-bold">Step 2: Go to Profile or Settings</span><br>
+            Tap on the profile icon located at the top-right (or bottom menu) to open the profile or account settings section.<br><br>
+
+            <span class="font-bold">Step 3: Select 'Account Settings'</span><br>
+            Within the profile section, find and tap on <strong>‘Account Settings’</strong>.<br><br>
+
+            <span class="font-bold">Step 4: Tap on 'Delete My Account'</span><br>
+            Scroll to the bottom of Account Settings and select the option <strong>‘Delete My Account’</strong>.<br><br>
+
+            <span class="font-bold">Step 5: Confirm Deletion</span><br>
+            A warning prompt will appear stating that this action is permanent. Confirm the deletion by entering your password (if required) and tapping <strong>‘Confirm’</strong>.<br><br>
+
+            <span class="font-bold">Step 6: Final Notification</span><br>
+            You will see a confirmation message. Your account and all associated data will be scheduled for deletion and will be removed from our servers within 7 working days.<br><br>
+
+            <span class="font-bold">Important Notes:</span><br>
+            - Once deleted, your account cannot be recovered.<br>
+            - Make sure to back up any important information before deleting.<br>
+            - If you're facing issues, please email us directly.<br><br>
+
+            <span class="font-bold">Need Help?</span><br>
+            If you experience any problems or have questions, feel free to contact us:<br><br>
+
+            <span class="font-bold">RoomsVital Support</span><br>
+            <span class="font-bold">Email:</span> support@roomsvital.com<br>
+            <span class="font-bold">Phone:</span> +91 766 775 0076<br><br>
+        </div>
+    </div>
+</section>
+
+
+
+
+  <!-- footer section -->
+
+    <section id="footer">
+        <div x-intersect="social=true" class="w-screen bg-black
+        flex flex-col-reverse justify-center lg:flex-row xl:text-lg  text-center lg:text-left">  
+          <div class="text-white font-thin py-4 lg:py-10 px-10">
+                <i class="fa-solid fa-location-dot"></i> <span class="font-medium"> Reg. Add:</span> RoomsVital Automation Solutions <br  class="hidden lg:block"> Private Limited,
+                <br> Village: Nipania Bandh, East of Shiv
+              <br> Temple, Barauni, Begusarai
+                <br>Bihar - 851112 (India)
+                <br>
+                <br>
+              <i class="fa-solid fa-location-dot"></i> <span class="font-medium">Punjab Add:</span> Workyard Coworking Space, <br class="hidden lg:block"> SCO 1, 1st floor, City Plaza
+                <br> Peer Muchalla Rd, Sector 20, Zirakpur
+                <br> SAS Nagar (Mohali)
+                <br> Punjab - 140603 (India)
+                <br>
+                <br>
+            <i class="fa-solid fa-location-dot"></i> <span class="font-medium">Haryana Add:</span> Nasscom Innovation Hub, <br class="hidden lg:block"> Plot 1, Udyog Vihar
+                <br> Phase 1, Dundahera Village, Sector 20,
+                <br> Gurugram
+                <br> Haryana - 122022 (India)
+                <br>
+                
+          </div>
+          <div class="font-thin px-10 py-4 lg:py-10  lg:space-y-5  text-white">
+           <div class="text-white hover:text-[#eb7047]">
+            <a href="https://wa.me/917667750076?text=I%20have%20query%20about%20your%20products">
+                <i class="fa-solid fa-phone"></i> +91 766 775 0076 
+            </a>
+           </div>
+           <div class="text-white hover:text-[#eb7047]">
+            <a href="mailto:support@roomsvital.com">
+                <i class="fa-solid fa-envelope"></i> support@roomsvital.com 
+            </a>
+          </div>
+          <div class="text-white hover:text-[#eb7047]">
+            <a href="mailto:ayush@roomsvital.in">
+                <i class="fa-solid fa-envelope"></i> ayush@roomsvital.in
+            </a>
+            </div>
+       
+       
+            </div>
+        <div class="font-thin px-10 py-4 lg:py-10 space-y-5 flex-col flex  text-white">
+            <a href="../#hero" class="hover:text-[#eb7047]">Home</a>
+            <a href="../#product" class="hover:text-[#eb7047]">Product</a>
+            <a href="../#aboutus" class="hover:text-[#eb7047]">About Us</a>
+            <a href="../#media" class="hover:text-[#eb7047]">Media</a>
+            <a href="#privacy_policy" class="hover:text-[#eb7047]">Privacy Policy</a>
+       </div>
+        </div>
+    </section>
+    
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+  <script>
+    setTimeout(function(){
+        $('.loader-bg').fadeToggle();
+    },2000);
+  </script>
+  
+    <script>
+        document.getElementById("ayushlink").addEventListener("click",() => window.open("https://linkedin.com/in/voyage-finder/", "_blank"))
+        document.getElementById("mohitlink").addEventListener("click",() => window.open("https://www.linkedin.com/in/this-is-mohit/", "_blank"))
+        document.getElementById("deepaklink").addEventListener("click",() => window.open("https://www.linkedin.com/in/deepakgill/", "_blank"))
+    </script>
+</body>
+</html>
